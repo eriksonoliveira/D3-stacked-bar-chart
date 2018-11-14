@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>D3 tutorial</title>
+  </head>
+  <style>
+    /* set the CSS */
+    .chart {
+      margin-top: 2rem;
+      margin-left: 2rem;
+    }
+
+    .chartArea {
+      border: 1px solid #ccc;
+      box-shadow: 0px 5px 5px -5px #ccc;
+      font-family: sans-serif;
+    }
+
+    .bar2 {
+      fill: black;
+    }
+
+    .bar {
+      opacity: 1;
+      transition: all 0.2s;
+    }
+
+    .bar.selected {
+      opacity: 0.8;
+      stroke-width: 1.2;
+      stroke: rgb(82, 82, 82);
+    }
+
+    .line {
+      fill: none;
+      stroke: steelblue;
+      stroke-width: 2px;
+    }
+
+    div.tooltip {
+      color: #fff;
+      position: absolute;
+      text-align: center;
+      width: 60px;
+      height: 28px;
+      padding: 4px 6px;
+      font: 12px sans-serif;
+      background: rgb(34, 34, 34);
+      border: 0px;
+      border-radius: 6px;
+      pointer-events: none;
+    }
+
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+    }
+
+    .axis .domain {
+      stroke: none;
+    }
+
+    .y .tick line,
+    .grid line {
+      stroke: #ddd;
+    }
+
+    .grid path {
+      stroke-width: 0;
+    }
+
+    .legend {
+      font-size: 12px;
+    }
+
+    .title {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  </style>
+
+  <body>
+    <div id="stackedBar_chart" class="chart"></div>
+    <div id="bar_chart" class="chart"></div>
+    <div id="bar_chart2" class="chart"></div>
+    <div id="line_chart" class="chart"></div>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="./line_chart.js"></script>
+    <script src="./stackedBar_chart.js"></script>
+    <script src="./bar_chart.js"></script>
+    <script src="./bar_chart2.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
